@@ -25,7 +25,7 @@ def on_leave(event) :
 
 # Create Button
 button = tk.Button(root, text="Hover Me")
-button. pack(pady=20)
+button.pack(pady=20)
 
 # Bind Events
 button.bind("<Enter>", on_enter)
@@ -49,9 +49,9 @@ def increment_counter():
 
 # Label and Button
 label = tk.Label(root, text="Count: 0", font=("Arial", 14))
-label. pack(pady=10)
+label.pack(pady=10)
 button = tk.Button(root, text="Ctick Me", command=increment_counter)
-button. pack(pady=10)
+button.pack(pady=10)
 root.mainloop ()
 
 #%% 4. Managing Button States

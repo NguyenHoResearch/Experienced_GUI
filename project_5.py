@@ -70,11 +70,11 @@ PASSWORD = "NguyenHo"
 
 # Labels and Entry Fields
 tk.Label(root, text="Username:").pack()
-username_entry = tk. Entry(root)
+username_entry = tk.Entry(root)
 username_entry.pack()
 
 tk.Label(root, text="Password:").pack()
-password_entry = tk. Entry(root, show="*")
+password_entry = tk.Entry(root, show="*")
 password_entry.pack()
 
 # Authentication Function
@@ -87,7 +87,7 @@ def login():
         messagebox.showerror ("Login Failed", "Invalid username or password.")
 
 # Login Button
-login_btn = tk. Button(root, text="Login", command=login)
+login_btn = tk.Button(root, text="Login", command=login)
 login_btn.pack(pady=10)
 
 root.mainloop()

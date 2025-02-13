@@ -19,15 +19,15 @@ import tkinter as tk
 # Main Window
 root = tk.Tk()
 root.title("Listbox Example")
-root.geometry ("300x300")
+root.geometry("300x300")
 
 # Listbox Widget
-listbox = tk. Listbox (root)
+listbox = tk.Listbox(root)
 listbox.pack(pady=10)
 
 # Add Items to Listbox
-listbox.insert(tk. END,"Task 1")
-listbox.insert(tk. END,"Task 2")
+listbox.insert(tk.END, "Task 1")
+listbox.insert(tk.END, "Task 2")
 
 # Get Selected Item
 def get_selected():
@@ -45,14 +45,14 @@ import tkinter as tk
 # Main Window
 root = tk.Tk()
 root.title("Listbox with Scrollbar")
-root.geometry ("300x300")
+root.geometry("300x300")
 
 # Frame for Listbox and Scrollbar
-frame = tk.Frame (root)
+frame = tk.Frame(root)
 frame.pack(pady=10)
 
 # Scrollbar
-scrollbar = tk.Scrollbar (frame)
+scrollbar = tk.Scrollbar(frame)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 # Listbox

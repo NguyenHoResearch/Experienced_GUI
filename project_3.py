@@ -58,16 +58,16 @@ root.mainloop ()
 import tkinter as tk
 
 # Main Window
-root = tk. Tk()
+root = tk.Tk()
 root.title("Dynamic Result Display")
 root.geometry ("300x200")
 
 # Input Field
-entry = tk. Entry(root)
+entry = tk.Entry(root)
 entry.pack(pady=10)
 
 # Result Label
-result_label = tk. Label(root, text="Result will be displayed here.")
+result_label = tk.Label(root, text="Result will be displayed here.")
 result_label.pack(pady=10)
 
 # Update Label

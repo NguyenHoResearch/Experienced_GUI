@@ -47,7 +47,7 @@ canvas.pack()
 # Draw on Mouse Drag
 def draw(event):
     x, y = event.x, event.y
-    canvas. create_oval(x, y, x+2, y+2, fill="black", outline="black")
+    canvas.create_oval(x, y, x+2, y+2, fill="black", outline="black")
     # canvas.create_oval(x, y, x+20, y+20, fill="black", outline="black")
 
 canvas.bind("<B1-Motion>", draw)
