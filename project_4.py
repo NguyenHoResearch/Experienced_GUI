@@ -7,18 +7,19 @@
 """
 
 # %% 1. What is a Canvas Widget?
-# The canvas widget is used for drawing shapes, images, and freehand drawings.
+# The Canvas widget is used for drawing shapes, images, and freehand sketches.
 # It supports lines, circles, rectangles, text, and more.
-# It allows mouse interaction.
+# It also allows mouse interaction.
 import tkinter as tk
 
+# Main Window
 root = tk.Tk()
-
 canvas = tk.Canvas(root, width=100, height=300, bg="white")
 canvas.pack()
 
 # %% 2. Drawing Shapes and Lines
 import tkinter as tk
+
 # Main Window
 root = tk.Tk()
 
@@ -46,24 +47,26 @@ canvas.pack()
 # Draw on Mouse Drag
 def draw(event):
     x, y = event.x, event.y
-    # canvas. create_oval(x, y, x+2, y+2, fill="black", outline="black")
-    canvas.create_oval(x, y, x+20, y+20, fill="black", outline="black")
+    canvas. create_oval(x, y, x+2, y+2, fill="black", outline="black")
+    # canvas.create_oval(x, y, x+20, y+20, fill="black", outline="black")
 
 canvas.bind("<B1-Motion>", draw)
 root.mainloop()
 
 # %% 4. Clearing and Resetting the Canvas
 import tkinter as tk
+
+# Main Window
 root = tk.Tk()
 root.title("Clear Canvas")
-root.geometry ("400x400")
+root.geometry("400x400")
 
 canvas = tk.Canvas(root, width=400, height=300, bg="white")
 canvas.pack()
 
 # Drawing Function
 def draw(event):
-    x, y = event.x, event. y
+    x, y = event.x, event.y
     canvas.create_oval(x, y, x+2, y+2, fill="black", outline="black")
 
 # Clear Function

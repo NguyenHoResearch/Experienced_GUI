@@ -6,9 +6,9 @@
 - 5. Project 5: Simple Login System
 """
 # %% 1. What are Message Boxes?
-# Message boxes are pop up dialogs used to show messages, warnings or confirmation Prompts.
-# Tkinter provides them through the Messagebox module, which you have probably already seen a little bit if you remember.
-# Common uses of this include displaying error messages, showing success notifications, or asking user confirmation.
+# Message boxes are pop-up dialogs used to display messages, warnings, or confirmation prompts.
+# Tkinter provides them through the Messagebox module, which you may have already encountered.
+# Common uses include displaying error messages, showing success notifications, or asking for user confirmation.
 from tkinter import messagebox
 messagebox.showinfo("Title", "This is an information message")
 
@@ -16,6 +16,7 @@ messagebox.showinfo("Title", "This is an information message")
 from tkinter import messagebox 
 import tkinter as tk
 
+# Main Window
 root = tk.Tk()
 root.withdraw()
 
@@ -31,8 +32,9 @@ print ("Response:", response)
 # %% 3. Using Message Boxes for Validation
 import tkinter as tk 
 from tkinter import messagebox
-root = tk.Tk()
 
+# Main Window
+root = tk.Tk()
 root.title("Validation Example")
 root.geometry ("300x200")
 
@@ -57,6 +59,7 @@ root.mainloop()
 import tkinter as tk 
 from tkinter import messagebox
 
+# Main Window
 root = tk.Tk()
 root. title("Simple Login")
 root. geometry ("300x200")

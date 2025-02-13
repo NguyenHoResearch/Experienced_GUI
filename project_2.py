@@ -7,44 +7,48 @@
 """
 #%% # %% 1. How Buttons Work in Tkinter
 # Buttons are widgets in Tkinter that trigger an event handler when clicked.
-# Events can call functions, update variables or modify other widgets, and the command parameter in button links it to a specific function.
+# Events can call functions, update variables, or modify other widgets. 
+# The command parameter in a button links it to a specific function.
 
 #%% 2. Binding Events to Buttons
 import tkinter as tk
 root = tk.Tk()
-root. title("Button Events")
-root. geometry ("300x200" )
+root.title("Button Events")
+root.geometry ("300x200" )
 
 # Event Handlers
 def on_enter(event):
-    button. config(text="Mouse Over")
+    button.config(text="Mouse Over")
 
 def on_leave(event) :
-    button. config(text="Mouse Out" )
+    button.config(text="Mouse Out")
 
 # Create Button
-button = tk. Button(root, text="Hover Me")
+button = tk.Button(root, text="Hover Me")
 button. pack(pady=20)
+
 # Bind Events
 button.bind("<Enter>", on_enter)
 button.bind("<Leave>", on_leave)
+
 root.mainloop()
 
 #%% 3. Dynamic Updates Using Button Events
 import tkinter as tk
 root = tk.Tk()
-root. title("Dynamic Button Counter")
-root. geometry ("300x200" )
+
+root.title("Dynamic Button Counter")
+root.geometry ("300x200" )
 
 # Counter Variable
 counter = 0
 def increment_counter():
     global counter 
     counter += 1
-    label. config(text=f"Count: {counter}")
+    label.config(text=f"Count: {counter}")
 
 # Label and Button
-label = tk. Label(root, text="Count: 0", font=("Arial", 14))
+label = tk.Label(root, text="Count: 0", font=("Arial", 14))
 label. pack(pady=10)
 button = tk.Button(root, text="Ctick Me", command=increment_counter)
 button. pack(pady=10)
@@ -52,24 +56,24 @@ root.mainloop ()
 
 #%% 4. Managing Button States
 import tkinter as tk
-root = tk. Tk()
-root. title("Button State Management")
-root. geometry ("300x200")
+root = tk.Tk()
+root.title("Button State Management")
+root.geometry ("300x200")
 
 def toggle_button():
-    if button ["state"] == "normal":
+    if button["state"] == "normal":
         button.config(state="disabled")
-        toggle__btn.config(text="Enable Button")
+        toggle_btn.config(text="Enable Button")
     else:
-        button. config(state='normal' )
-        toggle__btn.config(text="Disable Button" )
+        button.config(state='normal' )
+        toggle_btn.config(text="Disable Button" )
 
 # Buttons
 button = tk.Button(root, text="I am Active")
 button.pack(pady=10)
 
-toggle__btn = tk.Button(root, text="Disable Button", command=toggle_button)
-toggle__btn.pack(pady=10)
+toggle_btn = tk.Button(root, text="Disable Button", command=toggle_button)
+toggle_btn.pack(pady=10)
 
 root.mainloop ( )
 

@@ -6,23 +6,23 @@
 - 5. Project 3: BMI Calculator
 """
 # %% 1. Understanding Input Fields in Tkinter
-# Tkinter, entry widgets are used for single line text input, which we have seen earlier.
-# They are ideal for accepting user data like numbers, names and other textual input.
+# In Tkinter, entry widgets are used for single-line text input, as we have seen earlier.
+# They are ideal for accepting user data like numbers, names, and other textual input.
 import tkinter as tk
 
 # Main Window
 root = tk.Tk()
-root. title("Input Field Example")
-root. geometry ("300x200")
+root.title("Input Field Example")
+root.geometry("300x200")
 
 # Input Field
-entry = tk. Entry(root, width=25)
-entry. pack(pady=10)
+entry = tk.Entry(root, width=25)
+entry.pack(pady=10)
 
 # Button to Display Input
 def display_input():
     user_input = entry.get()
-    print ("User Input:", user_input)
+    print("User Input:", user_input)
 
 button = tk.Button(root, text="Submit", command=display_input)
 button.pack(pady=10)
@@ -33,8 +33,9 @@ root.mainloop()
 # %% 2. Getting and Validating User Input
 import tkinter as tk
 root = tk.Tk()
-root. title("Input Validation")
-root. geometry ("300x200")
+
+root.title("Input Validation")
+root.geometry ("300x200")
 
 # Input Field
 entry = tk. Entry(root)
@@ -48,16 +49,18 @@ def validate_input():
     except ValueError:
         print("❌ Invalid Input. Please enter a number.")
 
-button = tk. Button(root, text="Validate", command=validate_input)
-button. pack(pady=10)
+button = tk.Button(root, text="Validate", command=validate_input)
+button.pack(pady=10)
 
 root.mainloop ()
 
 # %% 3. Displaying Dynamic Results
 import tkinter as tk
+
+# Main Window
 root = tk. Tk()
-root. title("Dynamic Result Display")
-root. geometry ("300x200")
+root.title("Dynamic Result Display")
+root.geometry ("300x200")
 
 # Input Field
 entry = tk. Entry(root)
@@ -68,12 +71,13 @@ result_label = tk. Label(root, text="Result will be displayed here.")
 result_label.pack(pady=10)
 
 # Update Label
-def update_label ():
+def update_label():
     text = entry.get()
-    result_label. config (text=f"You entered: {text}")
+    result_label.config (text=f"You entered: {text}")
 
-button = tk. Button(root, text="Update", command=update_label)
-button. pack(pady=10)
+button = tk.Button(root, text="Update", command=update_label)
+button.pack(pady=10)
+
 root.mainloop()
  
 # %% 4. Using Entry Widgets with Labels and Buttons
@@ -98,12 +102,14 @@ title_label.pack(pady=20)
 # Weight Input
 weight_label = tk.Label(root, text="Enter your weight (kg):", font=("Arial", 12), bg="#f0f4c3")
 weight_label.pack()
+
 weight_entry = tk.Entry(root, font=("Arial", 12), width=15)
 weight_entry.pack(pady=5)
 
 # Height Input
 height_label = tk.Label(root, text="Enter your height (m):", font=("Arial", 12), bg="#f0f4c3")
 height_label.pack()
+
 height_entry = tk.Entry(root, font=("Arial", 12), width=15)
 height_entry.pack(pady=5)
 

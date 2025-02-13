@@ -6,16 +6,17 @@
 - 5. Project 6: To-Do List GUI
 """
 # %% 1. Introduction to Advanced Tkinter Widgets
-# As I mentioned, ListBox, which displays a list of items can be helpful for displaying your to do list items in this particular case.
-# Then we have scroll bar scroll through the content in widgets, example list, box, canvas, etc.
-# Frame is something that we used in our previous project where we did a drawing pad, where we created a frame and we added items into that.
-# So that's again to organize widgets into sections where you can row and columns based.
+# As I mentioned, the Listbox widget, which displays a list of items, can be useful for showing a to-do list in this case.
+# Then we have the Scrollbar, which allows scrolling through the content of widgets such as Listbox, Canvas, etc.
+# The Frame widget was used in our previous project, where we created a drawing pad. We added a Frame and placed items inside it.
+# Frames help organize widgets into sections, using rows and columns as needed.
 
 # %% 2. Using Listbox for Dynamic Lists
-#  ListBox allows users to add, select and remove items from a list. 
-# It supports multi-selection scrolling and dynamic updates.
-
+# The Listbox widget allows users to add, select, and remove items from a list.  
+# It supports multi-selection, scrolling, and dynamic updates.
 import tkinter as tk
+
+# Main Window
 root = tk.Tk()
 root.title("Listbox Example")
 root.geometry ("300x300")
@@ -40,6 +41,8 @@ root.mainloop ()
 
 # %% 3. Scrollbar Integration
 import tkinter as tk
+
+# Main Window
 root = tk.Tk()
 root.title("Listbox with Scrollbar")
 root.geometry ("300x300")
@@ -49,12 +52,11 @@ frame = tk.Frame (root)
 frame.pack(pady=10)
 
 # Scrollbar
-scrollbar = tk. Scrollbar (frame)
+scrollbar = tk.Scrollbar (frame)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 # Listbox
-listbox = tk.Listbox(frame, yscrollcommand=scrollbar.set,
-height=10)
+listbox = tk.Listbox(frame, yscrollcommand=scrollbar.set, height=10)
 listbox.pack()
 
 # Configure Scrollbar
@@ -67,6 +69,8 @@ root.mainloop()
 
 # %% 4. Handling User Actions (Add, Delete, Clear)
 import tkinter as tk
+
+# Main Window
 root = tk.Tk()
 root.title("Listbox Management")
 root.geometry ("300x300" )
